@@ -28,7 +28,7 @@ const DOMElements = {
 }
 
 const createList = (city, temp, high, low, forecast, humidity) => {
-    const html = `<div id=${city} class='table d-flex justify-content-center' style="width: 18rem;">
+    const html = `<div id=${city} class='table d-flex justify-content-center' style="width: 100%;">
     <table class="table">
         <thead>
             <tr>
@@ -74,16 +74,19 @@ function SearchPhotos() {
         })
         .then(function(data) {
             console.log(data);
-            let result = data.results[0].urls.small
-
+            let result = data.results[1].urls.small
+            let image = `<img src="${result}"/>`   //  <--- need <img src to display the image on website
             
+            // old code to get all photos displayed
             // data.results.forEach(photo => {
             //     let result = `
             //     <img src="${photo.urls.small}">
             //     <a href="${photo.links.download}">
             // `;
-            $('#result').append(result);
+            $('#result').append(image);
         })
 };
 
 // })};
+
+
