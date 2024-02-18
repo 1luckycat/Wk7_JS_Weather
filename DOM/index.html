@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="./css/main.css">
 <script src="./js/main.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <title>JavaScript Weather Application</title>
 </head>
 <body>
@@ -19,9 +20,11 @@
             <div class="col">
                 <form name="getWeather" action="" id="weather-form">
                     <input type="text" name="city" id="city" placeholder="Enter city">
-                    <button type="submit" id="submit-button">Submit</button>
+                    <button onclick="SearchPhotos()" type="submit" id="submit-button">Submit</button>
                 </form>
                 <section class="list-group weather-info mt-4"></section>
+                <!-- <div class="container d-flex justify-content-center mt-3" id="result"></div> -->
+                <div id="result"></div>
             </div>
         </div>
     </div>
